@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="container">
             <div className="row text-white">
             <ContactInfo icon={<FaPhoneAlt />} title="Give us a Call" content="+962-478-123-4567" />
-              <ContactInfo icon={<FaEnvelope />} title="Send us a Message" content="kinterschoo07@gmail.com" />
+              <ContactInfo icon={<FaEnvelope />} title="Send us a Message" content="Arjunschoo07@gmail.com" />
               <ContactInfo icon={<FaMapMarkerAlt />} title="Visit our Location" content="07 Suitland Street 120 USA" />
             </div>
           </div>

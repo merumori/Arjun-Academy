@@ -89,7 +89,7 @@ const PopularClasses = () => {
       <div className="row">
         <div className="col-12 text-center">
           <div className="view-class mt-4">
-            <a className="btn  btn-lg" href="classes.html">
+            <a className="btn  btn-lg" href="/class">
               See More Classes
             </a>
           </div>

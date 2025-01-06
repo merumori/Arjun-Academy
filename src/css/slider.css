@@ -1,6 +1,6 @@
 /* General Styles for the Carousel */
 .carousel-item img {
-    /* object-fit: cover; Ensures the image covers the container without distortion */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
     width: 100%; /* Ensures the image takes full width */
     height: auto; /* Adjusts height according to the image's aspect ratio */
 }
@@ -145,7 +145,8 @@
 
     /* Make images fully responsive on mobile */
     .carousel-item img {
-        height: auto; /* Allow the height to scale with the width */
-        width: 50%; /* Ensure image scales to full width */
+        height: 100%; /* Allow the height to scale with the width */
+        object-fit: cover; /* Ensure the image doesn't stretch */
+        width: 100%; /* Ensure image scales to full width */
     }
 }

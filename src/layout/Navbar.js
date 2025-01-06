@@ -2,8 +2,15 @@ import React from 'react';
 import '../css/Navbar.css'; // Import the custom CSS
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
 import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
+import { useNavigate } from 'react-router-dom';
+import logo from '../img/arjun.png'
 
 const NavBar = () => {
+  const navigate = useNavigate();
+
+  const handleAdmissionClick = () => {
+    navigate('/admission'); // Navigate to the admission route
+  };
   return (
     <header>
       {/* Top Bar */}
@@ -41,7 +48,9 @@ const NavBar = () => {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
-          <a className="navbar-brand logo" href="/">Arjun Academy</a>
+        <a className="navbar-brand logo" href="/">
+  <img src={logo} alt="Arjun Academy Logo" className="img-fluid" />
+</a>
           <button
             className="navbar-toggler"
             type="button"
@@ -61,25 +70,67 @@ const NavBar = () => {
               <li className="nav-item">
                 <a className="nav-link" href="/about">ABOUT</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/pages">PAGES</a>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="/pages"
+                  id="pagesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  PAGES
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="pagesDropdown">
+                  <li><a className="dropdown-item" href="/teachers">Teachers</a></li>
+                  <li><a className="dropdown-item" href="/teacherDetails">Teachers Details</a></li>
+              
+                </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/classes">CLASSES</a>
+                <a className="nav-link" href="/class">CLASS</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/shop">SHOP</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/blog">BLOG</a>
+              {/* <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="/shop"
+                  id="shopDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  SHOP
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="shopDropdown">
+                  <li><a className="dropdown-item" href="/shop1">Shop Item 1</a></li>
+                  <li><a className="dropdown-item" href="/shop2">Shop Item 2</a></li>
+                  <li><a className="dropdown-item" href="/shop3">Shop Item 3</a></li>
+                </ul>
+              </li> */}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="/blog"
+                  id="blogDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  BLOG
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="blogDropdown">
+                  <li><a className="dropdown-item" href="/StudentBlog"> Student Blog </a></li>
+                  {/* <li><a className="dropdown-item" href="/blog2">Blog Details</a></li> */}
+          
+                </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/contact">CONTACT</a>
               </li>
             </ul>
-            <button className="btn btn-primary admission-btn" onClick={() => alert('Admissions Now!')}>
-              ADMISSION NOW
-            </button>
+            <button className="btn btn-primary admission-btn" onClick={handleAdmissionClick}>
+      ADMISSION NOW
+    </button>
           </div>
         </div>
       </nav>

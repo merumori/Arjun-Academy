@@ -35,7 +35,7 @@ const AboutHome = () => {
               utilizing viral techniques.
             </p>
             <div className="about-btn">
-              <a className="btn  btn-lg px-4 py-2" href="contact.html">
+              <a className="btn  btn-lg px-4 py-2" href="/admission">
                 Admission Now
               </a>
             </div>

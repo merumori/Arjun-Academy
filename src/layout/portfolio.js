@@ -18,37 +18,37 @@ const PortfolioArea = () => {
       imgSrc: img1,
       title: "Product Name Here",
       category: ["cat3", "cat4", "cat2"],
-      author: "Kinter Theme",
+      author: "Arjun Theme",
     },
     {
       imgSrc: img2,
       title: "Product Name Here",
       category: ["cat1", "cat2", "cat4"],
-      author: "Kinter Theme",
+      author: "Arjun Theme",
     },
     {
       imgSrc: img3,
       title: "Product Name Here",
       category: ["cat2", "cat3", "cat1"],
-      author: "Kinter Theme",
+      author: "Arjun Theme",
     },
     {
       imgSrc: img4,
       title: "Product Name Here",
       category: ["cat1", "cat2", "cat4"],
-      author: "Kinter Theme",
+      author: "Arjun Theme",
     },
     {
       imgSrc: img5,
       title: "Product Name Here",
       category: ["cat3", "cat1", "cat4"],
-      author: "Kinter Theme",
+      author: "Arjun Theme",
     },
     {
       imgSrc: img6,
       title: "Product Name Here",
       category: ["cat3", "cat4", "cat2"],
-      author: "Kinter Theme",
+      author: "Arjun Theme",
     },
   ];
 

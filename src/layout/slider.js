@@ -22,7 +22,7 @@ const CarouselComponent = () => {
                     We offer a variety of classes that help you excel in your studies. Join us today!
                   </p>
                   <a href="/admission" className="btn btn-primary me-3">Admission Now</a>
-                  <a href="/our-classes" className="btn btn-outline-light">Our Classes</a>
+                  <a href="/class" className="btn btn-outline-light">Our Classes</a>
                 </div>
               </div>
             </div>

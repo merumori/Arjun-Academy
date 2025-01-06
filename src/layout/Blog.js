@@ -38,7 +38,7 @@ const BlogArea = () => {
                 <h4 className="blog-title">
                   <a href="blog-details.html">Why children need a Healthy Environment</a>
                 </h4>
-                <Button className="blog-btn" variant="outline-primary" href="blog-details.html">
+                <Button className="blog-btn" variant="outline-primary" href="/StudentBlog">
                   Read More
                 </Button>
               </div>
@@ -64,7 +64,7 @@ const BlogArea = () => {
                 <h4 className="blog-title">
                   <a href="blog-details.html">Planting Seeds in the Hearts of Preschoolers</a>
                 </h4>
-                <Button className="blog-btn" variant="outline-primary" href="blog-details.html">
+                <Button className="blog-btn" variant="outline-primary" href="/StudentBlog">
                   Read More
                 </Button>
               </div>
@@ -90,7 +90,7 @@ const BlogArea = () => {
                 <h4 className="blog-title">
                   <a href="blog-details.html">Full-day kindergarten in Alberta another.</a>
                 </h4>
-                <Button className="blog-btn" variant="outline-primary" href="blog-details.html">
+                <Button className="blog-btn" variant="outline-primary" href="/StudentBlog">
                   Read More
                 </Button>
               </div>

@@ -1,0 +1,137 @@
+/* Base styles */
+.classes-area {
+    background-color: #f4f7fa;
+  }
+  
+  .class-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    padding: 20px; /* Added padding for the card */
+    margin-top: 70px; /* Added margin-top for each card */
+  }
+  
+  .class-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .class-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .class-content {
+    padding: 20px;
+  }
+  
+  .class-content h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .class-content p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+  }
+  
+  .schedule {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .schedule li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .schedule .class-size {
+    color: #1bcf5c;
+    font-weight: bold;
+  }
+  
+  .schedule .class-size-2 {
+    color: #ff8c00;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pagination li {
+    margin: 0 5px;
+  }
+  
+  .pagination a {
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a:hover {
+    color: #1bcf5c;
+  }
+  
+  .pagination .active a {
+    color: #1bcf5c;
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .class-item {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .class-item {
+      margin-bottom: 20px;
+    }
+  
+    .class-content h4 {
+      font-size: 18px;
+    }
+  
+    .class-content p {
+      font-size: 12px;
+    }
+  
+    .schedule li {
+      font-size: 12px;
+    }
+  
+    .pagination ul {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .pagination ul {
+      font-size: 12px;
+    }
+  }
+  
