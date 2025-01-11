@@ -1,0 +1,65 @@
+/* Custom Styles for Teacher Table */
+.teacher-images img {
+    transition: transform 0.3s ease;
+  }
+  
+  .teacher-images img:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-link {
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .social-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Table Styling */
+  .table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  /* Mobile Responsiveness for Table */
+  @media (max-width: 768px) {
+    .table th, .table td {
+      font-size: 12px;
+    }
+  
+    .teacher-images img {
+      width: 40px;
+      margin-right: 5px;
+    }
+  
+    .table {
+      font-size: 14px;
+    }
+  }
+  
+  /* Hover effect for the whole table row */
+  tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Default Image Styling */
+  .teacher-images img {
+    border-radius: 50%;
+  }
+  
+  /* Responsiveness of the Container */
+  @media (max-width: 576px) {
+    .teacher-images {
+      text-align: center;
+    }
+  
+    .table-responsive {
+      overflow-x: scroll;
+    }
+  }
+  

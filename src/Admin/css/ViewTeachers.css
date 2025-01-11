@@ -1,0 +1,74 @@
+/* ViewTeachers.css */
+.table th,
+.table td {
+  text-align: center; /* Center-align text in table */
+  vertical-align: middle; /* Align vertically for better readability */
+  transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+}
+
+.table td {
+  background-color: #fff; /* Add white background color for table cells */
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+.img-thumbnail {
+  border-radius: 50%; /* Circular image thumbnails */
+  border: 2px solid #ddd; /* Add border around images */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom-in effect */
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.btn-primary {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-warning,
+.btn-danger {
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.btn-warning:hover,
+.btn-danger:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.teacher-row {
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in animation for table rows */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .table th, .table td {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+  }
+
+  .img-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+}
