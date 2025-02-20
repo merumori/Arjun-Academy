@@ -31,18 +31,18 @@ const Navbar = ({ toggleSidebar, isMobile, isSidebarOpen }) => {
     <>
       <style>{fadeInKeyframes}</style>
       <nav className="navbar navbar-expand-lg navbar-light shadow fixed-top px-3" style={navbarStyle}>
-        {isMobile && (
+        {/* {isMobile && (
           <button className="btn me-2" onClick={toggleSidebar}>
             {isSidebarOpen ? "✕" : "☰"}
           </button>
-        )}
+        )} */}
 
         {/* Logo with Glow Effect */}
         <a className="navbar-brand" href="/" style={{ animation: "glowEffect 2s infinite alternate" }}>
           <img src={logo} alt="Arjun Academy Logo" height="40" />
         </a>
 
-        <button
+        {/* <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -52,8 +52,8 @@ const Navbar = ({ toggleSidebar, isMobile, isSidebarOpen }) => {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
-
+        </button> */}
+{/* 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
@@ -91,7 +91,7 @@ const Navbar = ({ toggleSidebar, isMobile, isSidebarOpen }) => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div className="d-flex align-items-center">
           <button className="btn btn-light me-2">⚙️</button>

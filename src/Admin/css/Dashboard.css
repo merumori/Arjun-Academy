@@ -33,7 +33,7 @@
   100% { opacity: 0.5; }
 }
 
-/* Animated GIF around text */
+/* Animated GIF around text
 .admin-title::before,
 .admin-title::after {
   content: "";
@@ -53,7 +53,7 @@
 .admin-title::after {
   top: 0px;
   right: 0px;
-}
+} */
 
 /* GIF movement animation */
 @keyframes gifMove {
@@ -157,7 +157,7 @@
   }
   .admin-title {
     font-size: 1.2rem;
-    margin-top: 110px;
+    margin-top: -40px;
     margin-bottom: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
