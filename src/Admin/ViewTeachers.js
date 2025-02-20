@@ -94,7 +94,8 @@ const ViewTeachers = () => {
   };
 
   return (
-    <div className="container mt-5">
+  <div style={{  background: "linear-gradient(to right, #1bcf5c, #3e9cf7)", minHeight: "100vh", padding: "20px" }}>
+    <div className="container " style={{marginTop:"110px"}}>
       <h3 className="text-center mb-4">Teachers Information</h3>
       <div className="d-flex justify-content-end mb-3">
         <button
@@ -176,7 +177,7 @@ const ViewTeachers = () => {
         onImageChange={handleImageChange}
         onSave={handleEditSave}
       />
-
+ </div>
 {showAddModal && (
         <div className="modal show d-block" style={{ color: 'white' }}>
           <div className="modal-dialog">

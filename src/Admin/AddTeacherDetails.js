@@ -32,6 +32,12 @@ const TeacherDetails = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (formData.images.length < 3) {
+      alert('Please upload at least 3 images.');
+      return;
+    }
+
     const form = new FormData();
     Object.keys(formData).forEach((key) => {
       if (key === 'images') {
@@ -71,7 +77,7 @@ const TeacherDetails = () => {
   return (
     <Container className="form-container my-5">
       <Row className="justify-content-center">
-        <Col md="8" lg="6">
+        <Col>
           <Form onSubmit={handleSubmit} className="p-4 shadow rounded bg-light">
             <h2 className="text-center mb-4">Teacher Details</h2>
             <FormGroup>

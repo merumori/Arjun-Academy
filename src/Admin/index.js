@@ -1,25 +1,24 @@
 import React from "react";
-import Navbar from "./Navbar";
-import ViewAdmissions from "./ViewAdmissions";
+import { Routes, Route } from "react-router-dom"; // Import Route here
 
-import ViewTeachers from "./Viewtechar";
-import EditTeacherModal from "./EditTeacherModal";
-import TeacherDetails from "./AddTeacherDetails";
-import ViewTeacherDetails from './ViewTeacherDetails'
+import ViewAdmissions from "./ViewAdmissions";
+import ViewTeachers from "./ViewTeachers";
+import ViewTeacherDetails from "./ViewTeacherDetails";
+import Navbar from "./Navbar";
+import Dashboard from "./Dashboard";
 
 
 const Admin = () => {
   return (
-    <div className="App">
-        <Navbar/>
-        <ViewAdmissions/>
-        {/* <AddTeachers /> */}
-        <ViewTeachers/>
-        <EditTeacherModal/>
-        <TeacherDetails/>
-        <ViewTeacherDetails/>
+    <div className="App" >
+      <Navbar />
      
-     <h2>hello</h2>
+      <Routes>
+        <Route path="/" element={ <Dashboard />} />
+        <Route path="admission-data" element={<ViewAdmissions />} />
+        <Route path="teachers" element={<ViewTeachers />} />
+        <Route path="teacher-details" element={<ViewTeacherDetails />} />
+      </Routes>
     </div>
   );
 };
