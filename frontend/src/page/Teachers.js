@@ -8,7 +8,7 @@ const Teachers = () => {
   useEffect(() => {
     // Fetch teachers data from the backend when the component mounts
     axios
-      .get("http://localhost:5000/teachers") // Your backend URL
+      .get("https://arjun-academy-ijou.onrender.com/teachers") // Your backend URL
       .then((response) => {
         setTeachers(response.data); // Set the fetched data into state
       })
@@ -27,7 +27,7 @@ const Teachers = () => {
                 <div className="team-thumb">
                   {/* Dynamically render image with the correct URL */}
                   <img
-                    src={`http://localhost:5000/${member.image}`} // Reference the correct backend URL
+                    src={`https://arjun-academy-ijou.onrender.com/${member.image}`} // Reference the correct backend URL
                     alt={member.name}
                     className="img-fluid"
                   />
