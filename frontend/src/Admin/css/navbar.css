@@ -1,0 +1,20 @@
+.admin-navbar {
+    background-color: #1bcf5c;
+    padding: 12px;
+  }
+  
+  .navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: white !important;
+  }
+  
+  .nav-link {
+    color: white !important;
+    font-size: 16px;
+  }
+  
+  .nav-link:hover {
+    color: #222 !important;
+  }
+  

@@ -1,0 +1,89 @@
+Section Background
+.section-bg-three {
+  background-image: linear-gradient(0deg, rgb(232, 90, 202) 0%, rgb(252, 78, 101) 100%);
+  /* This gradient background will be applied on larger screens */
+  height: 680px;
+}
+
+/* For mobile view, set a solid background color */
+@media (max-width: 767px) {
+  .section-bg-three {
+      background-color: #f9f9f9; /* Solid background for mobile view */
+      height: 100%;
+  }
+}
+
+/* Text Centering for Heading */
+.text-centerh2 {
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 55px;
+}
+
+/* Paragraph Styling */
+.pra {
+  align-items: center;
+  margin-right: 80px;
+}
+
+/* Blog Item Styling */
+.blog-item .blog-image {
+  overflow: hidden;
+  height: 300px; /* Set a fixed height for the image container */
+}
+
+.blog-item .blog-image img {
+  width: 100%;
+  height: 100%; /* Make image fill container */
+  object-fit: cover; /* Ensures the image covers the entire container */
+  transition: 0.3s;
+  transform: scale(1);
+}
+
+.blog-item:hover .blog-image img {
+  transform: scale(1.05); /* Image zoom effect */
+}
+
+.blog-item {
+  background-color: #fff;
+  height: 450px; /* Set a fixed height for each blog card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-item .blog-content {
+  padding: 20px;
+  position: relative;
+  flex-grow: 1; /* Ensures the content stretches to fill the card */
+}
+
+.blog-item .blog-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 25px;
+}
+
+.blog-btn {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ff4f58;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 767px) {
+  .blog-item {
+      margin-bottom: 30px;
+      height: auto; /* Allow cards to adjust their height on small screens */
+  }
+
+  .blog-item .blog-content {
+      padding: 15px;
+  }
+
+  .blog-item .blog-image {
+      height: 250px; /* Reduce image height on small screens */
+  }
+}

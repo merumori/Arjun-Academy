@@ -7,7 +7,7 @@ const admissionRoutes = require("./routes/admissionRoutes");
 const teacherRoutes = require('./routes/teacherRoutes');
 const path = require('path');
 const teacherDetailsRoutes = require('./routes/teacherDetailsRoutes.js');
-
+const classRoutes = require('./routes/classRoutes');
 dotenv.config();
 
 const app = express();
@@ -30,7 +30,7 @@ app.set("view engine", "ejs");
 app.use("/", admissionRoutes);
 app.use('/teachers', teacherRoutes);
 app.use("/singalteacher", teacherDetailsRoutes);
-
+app.use('/api', classRoutes);
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
   serverSelectionTimeoutMS: 10000, // Timeout if connection takes too long
