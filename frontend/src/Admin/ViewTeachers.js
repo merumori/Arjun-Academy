@@ -18,7 +18,7 @@ const ViewTeachers = () => {
 
   const fetchTeachers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/teachers");
+      const response = await axios.get("https://arjun-academy-ijou.onrender.com/teachers");
       setTeachers(response.data);
     } catch (error) {
       console.error("Error fetching teachers:", error);
@@ -30,7 +30,7 @@ const ViewTeachers = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/teachers/${id}`);
+      await axios.delete(`https://arjun-academy-ijou.onrender.com/teachers/${id}`);
       setTeachers(teachers.filter((teacher) => teacher._id !== id));
       alert("Teacher deleted successfully!");
     } catch (error) {
@@ -73,7 +73,7 @@ const ViewTeachers = () => {
         formData.append("image", selectedImage);
       }
 
-      await axios.put(`http://localhost:5000/teachers/${editTeacher._id}`, formData);
+      await axios.put(`https://arjun-academy-ijou.onrender.com/teachers/${editTeacher._id}`, formData);
       alert("Teacher updated successfully!");
       setShowEditModal(false);
       fetchTeachers();
@@ -158,7 +158,7 @@ const ViewTeachers = () => {
                     <td>{index + 1}</td>
                     <td>
                       <img
-                        src={`http://localhost:5000/${teacher.image}`}
+                        src={`https://arjun-academy-ijou.onrender.com/${teacher.image}`}
                         alt={teacher.name}
                         className="img-thumbnail"
                         style={{
