@@ -7,7 +7,7 @@ const ViewAdmissions = () => {
   useEffect(() => {
     const fetchAdmissions = async () => {
       try {
-        const response = await fetch("http://localhost:5000/admissions");
+        const response = await fetch("https://arjun-academy-ijou.onrender.com/admissions");
         if (response.ok) {
           const data = await response.json();
           setAdmissions(data);
@@ -26,7 +26,7 @@ const ViewAdmissions = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this record?")) {
       try {
-        const response = await fetch(`http://localhost:5000/admissions/${id}`, {
+        const response = await fetch(`https://arjun-academy-ijou.onrender.com/admissions/${id}`, {
           method: "DELETE",
         });
         if (response.ok) {
