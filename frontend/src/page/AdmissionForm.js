@@ -25,7 +25,7 @@ const AdmissionForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/admission", {
+      const response = await fetch("https://arjun-academy-ijou.onrender.com/admission", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
