@@ -1,0 +1,152 @@
+/* General Styles for the Carousel */
+.carousel-item img {
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    width: 100%; /* Ensures the image takes full width */
+    height: auto; /* Adjusts height according to the image's aspect ratio */
+}
+
+/* Section Notch Styles */
+.section-notch {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top Notch */
+.section-notch::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/shape/section-notch-top.png); /* Update with your image path */
+    background-size: contain;
+    background-repeat: repeat-x;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 80px; /* Adjust height as needed */
+    z-index: 24;
+}
+
+/* Bottom Notch */
+.section-notch::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/shape/section-notch-bottom.png); /* Update with your image path */
+    background-size: contain;
+    background-repeat: repeat-x;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 13px; /* Adjust height as needed */
+    z-index: 2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-notch::before,
+    .section-notch::after {
+        height: 4px; /* Smaller height for mobile */
+    }
+}
+
+/* Carousel Caption Styling */
+.carousel-caption {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 0;
+    transform: translateY(-50%); /* Centers it perfectly */
+    color: white;
+    text-align: left; /* Align text to the left */
+    z-index: 25;
+}
+
+.carousel-caption h2 {
+    font-size: 3rem; /* Large size for the title */
+    font-weight: bold; /* Make the title bold */
+    color: #ffffff; /* Set text color to white or any desired color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for better visibility */
+}
+
+.carousel-caption p {
+    font-size: 1.25rem; /* Medium size for description */
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure paragraph text is white */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow for better visibility */
+}
+
+/* Button Styling */
+.carousel-caption .btn {
+    margin-right: 10px; /* Space between buttons */
+    border-radius: 25px; /* Optional: Make buttons round */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Gradient Styling for Admission Button */
+.carousel-caption .btn-primary {
+    background: linear-gradient(45deg, red, orange); /* Red to Orange Gradient */
+    border: none; /* Remove the default border */
+    color: white;
+}
+
+.carousel-caption .btn-primary:hover {
+    background: linear-gradient(45deg, orange, red); /* Inverted gradient on hover */
+    color: white;
+}
+
+/* Gradient Styling for Our Classes Button */
+.carousel-caption .btn-outline-light {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+    background: linear-gradient( 145deg, rgb(35,204,136) 0%, rgb(142,207,53) 100%) /* Red to Orange Gradient */
+}
+
+.carousel-caption .btn-outline-light:hover {
+    background: linear-gradient(45deg, orange, red); /* Inverted gradient on hover */
+    color: white;
+}
+
+/* Container Adjustments */
+.container {
+    position: relative; /* Ensures text aligns relative to the container */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Bootstrap grid system adjustments */
+.col-lg-6 {
+    max-width: 50%; /* Ensures the content on the left takes up half of the screen */
+    margin-left: 200px;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h2 {
+        font-size: 2rem; /* Adjust title size on small screens */
+    }
+
+    .carousel-caption p {
+        font-size: 1rem; /* Adjust description font size */
+    }
+
+    .carousel-caption .btn {
+        width: 100%; /* Make buttons stack on small screens */
+        margin-bottom: 10px;
+    }
+
+    .col-lg-6 {
+        max-width: 100%; /* Full-width on small screens */
+        margin-left: 40px;
+    }
+
+    /* Make images fully responsive on mobile */
+    .carousel-item img {
+        height: 100%; /* Allow the height to scale with the width */
+        object-fit: cover; /* Ensure the image doesn't stretch */
+        width: 100%; /* Ensure image scales to full width */
+    }
+}

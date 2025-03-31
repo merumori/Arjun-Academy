@@ -1,0 +1,183 @@
+/* Top bar styles */
+.top-bar {
+    background-color: #23cc88;
+    color: white;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.top-bar span {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #3e9cf7;
+}
+
+/* Logo styles */
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #1bcf5c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #3e9cf7;
+}
+
+/* Navbar styles */
+.navbar {
+    border-bottom: 2px solid white;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1bcf5c;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: 10px;
+    opacity: 0; /* Start as invisible */
+    transform: translateY(-10px); /* Start slightly above */
+    visibility: hidden; /* Keep it hidden initially */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu.show {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Move it to its normal position */
+    visibility: visible; /* Make it appear */
+}
+
+/* Dropdown item styles */
+.dropdown-item {
+    font-size: 15px;
+    color: #333;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f9f9f9;
+    color: #1bcf5c;
+}
+
+/* Button styles */
+.admission-btn {
+    background: linear-gradient(to right, #1bcf5c, #3e9cf7);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.admission-btn:hover {
+    background: linear-gradient(to right, #3e9cf7, #1bcf5c);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Centering navbar items */
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Align items vertically in the center */
+        width: 100%; /* Take full width */
+        padding: 0; /* Remove padding */
+    }
+
+    /* Center nav links */
+    .nav-link {
+        padding: 10px 20px; /* Adjust padding */
+        width: 100%; /* Full width for better alignment */
+        text-align: center; /* Center the text */
+    }
+
+    .admission-btn {
+        margin-top: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        float: none;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjust top bar for mobile */
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-bar span {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    /* Centering navbar items */
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Align items vertically in the center */
+        width: 100%; /* Take full width */
+        padding: 0; /* Remove padding */
+    }
+
+    .nav-link {
+        padding: 10px 20px; /* Adjust padding */
+        width: 100%; /* Full width for better alignment */
+        text-align: center; /* Center the text */
+    }
+}
+
+/* Dropdown animation */
+@keyframes dropdownFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to dropdown menu */
+.dropdown-menu {
+    animation: dropdownFadeIn 0.3s ease-out forwards;
+}

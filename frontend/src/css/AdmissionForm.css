@@ -1,0 +1,144 @@
+.admission-form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4f9aff, #48db79); /* Linear gradient background */
+    padding: 20px;
+}
+
+.admission-card {
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title-img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin: 60px;
+}
+
+.titleimg {
+    max-width: 310px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.school-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3e9cf7;
+    text-align: center;
+}
+
+.form-title {
+    color: #1bcf5c;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #48db79;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.submit-btn:hover {
+    background-color: #3ca764;
+}
+.input-group-text {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+.input-group i {
+    color: #48db79; /* Icon color */
+    font-size: 18px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding-left: 40px; /* space for icon */
+    padding-right: 10px;
+}
+
+.form-select {
+    border-radius: 8px;
+    padding-left: 40px; /* space for icon */
+    padding-right: 10px;
+}
+
+.submit-btn {
+    background-color: #48db79;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.submit-btn:hover {
+    background-color: #3ca764;
+}
+
+
+@media (max-width: 768px) {
+    .title-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Only show center image on mobile view */
+    .title-img, .img-left, .img-right {
+        display: none;
+    }
+
+    .titleimg {
+        max-width: 310px;
+        margin-bottom: 10px;
+    }
+
+    .school-title {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    /* On desktop view, show all images */
+    .title-section {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .title-img, .img-left, .img-right {
+        display: inline-block;
+    }
+}
