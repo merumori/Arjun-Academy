@@ -31,7 +31,7 @@ const Classes = () => {
             <div key={classItem._id} className="col-xl-4 col-lg-4 col-md-6">
               <div className="class-item">
                 <div className="class-img">
-                  <img src={`http://localhost:5000${classItem.image}`} alt={classItem.title} />
+                  <img src={`https://arjun-academy-ijou.onrender.com${classItem.image}`} alt={classItem.title} />
                 </div>
                 <div className="class-content">
                   <h4 className="title">
