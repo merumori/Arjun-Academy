@@ -37,7 +37,7 @@ const InsertClass = () => {
     });
 
     try {
-      await axios.post('http://localhost:5000/api/classes', formDataObj, {
+      await axios.post('https://arjun-academy-ijou.onrender.com/api/classes', formDataObj, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 
