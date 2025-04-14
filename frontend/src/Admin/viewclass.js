@@ -16,7 +16,7 @@ const Classes = () => {
 
   const fetchClasses = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/classes');
+      const response = await axios.get('https://arjun-academy-4c7g.onrender.com/api/classes');
       setClasses(response.data);
     } catch (error) {
       console.error('Error fetching classes:', error);
@@ -32,7 +32,7 @@ const Classes = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this class?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/classes/${id}`);
+        await axios.delete(`https://arjun-academy-4c7g.onrender.com/api/classes/${id}`);
         fetchClasses();
       } catch (error) {
         console.error('Error deleting class:', error);
@@ -61,7 +61,7 @@ const Classes = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/classes/${editData._id}`, formData, {
+      await axios.put(`https://arjun-academy-4c7g.onrender.com/api/classes/${editData._id}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       fetchClasses();
@@ -104,7 +104,7 @@ const Classes = () => {
                 <td>
                   <div className="d-flex align-items-center justify-content-center">
                     <img
-                      src={`http://localhost:5000${classItem.image}`} 
+                      src={`https://arjun-academy-4c7g.onrender.com${classItem.image}`} 
                       alt={classItem.title}
                       className="rounded me-2"
                       style={{ width: '50px', height: '50px', objectFit: 'cover' }}

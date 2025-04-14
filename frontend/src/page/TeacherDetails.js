@@ -6,14 +6,14 @@ const TeacherDetails = () => {
 
   useEffect(() => {
     // Fetch data from the backend API
-    fetch('http://localhost:5000/singalteacher')
+    fetch('https://arjun-academy-4c7g.onrender.com/singalteacher')
       .then((response) => response.json())
       .then((data) => setTeachers(data))
       .catch((error) => console.error('Error fetching teachers:', error));
   }, []);
 
   const getImagePath = (image) => {
-    return image ? `http://localhost:5000/${image}` : '/path/to/default-image.jpg';
+    return image ? `https://arjun-academy-4c7g.onrender.com/${image}` : '/path/to/default-image.jpg';
   };
 
   return (

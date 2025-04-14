@@ -8,7 +8,7 @@ const Settings = () => {
 
   const getAdmins = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/auth/admins");
+      const res = await axios.get("https://arjun-academy-4c7g.onrender.com/api/auth/admins");
       setAdmins(res.data);
     } catch (err) {
       console.error("Failed to fetch admins:", err);

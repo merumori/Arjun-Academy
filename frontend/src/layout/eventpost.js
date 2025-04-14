@@ -26,7 +26,7 @@ const EventPost = () => {
 
   // Fetch event data from backend API
   useEffect(() => {
-    fetch('http://localhost:5000/api/events/all')
+    fetch('https://arjun-academy-4c7g.onrender.com/api/events/all')
       .then((res) => res.json())
       .then((data) => setEvents(data))
       .catch((error) => console.error('Error fetching events:', error));
@@ -88,7 +88,7 @@ const EventPost = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.img 
-                    src={`http://localhost:5000/uploads/${event.img}`}
+                    src={`https://arjun-academy-4c7g.onrender.com/uploads/${event.img}`}
                     alt={event.title}
                     style={styles.cardImgTop}
                     initial={{ scale: 0.9 }}

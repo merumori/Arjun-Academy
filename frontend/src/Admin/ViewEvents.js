@@ -10,7 +10,7 @@ const ViewEvents = () => {
   const [editId, setEditId] = useState(null);
 
   const fetchEvents = async () => {
-    const res = await axios.get('http://localhost:5000/api/events/all');
+    const res = await axios.get('https://arjun-academy-4c7g.onrender.com/api/events/all');
     setEvents(res.data);
   };
 
@@ -31,9 +31,9 @@ const ViewEvents = () => {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/events/update/${editId}`, formData);
+        await axios.put(`https://arjun-academy-4c7g.onrender.com/api/events/update/${editId}`, formData);
       } else {
-        await axios.post('http://localhost:5000/api/events/add', formData);
+        await axios.post('https://arjun-academy-4c7g.onrender.com/api/events/add', formData);
       }
       setForm({ title: '', date: '', time: '', location: '', description: '', img: null });
       setEditId(null);
@@ -58,7 +58,7 @@ const ViewEvents = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
-      await axios.delete(`http://localhost:5000/api/events/delete/${id}`);
+      await axios.delete(`https://arjun-academy-4c7g.onrender.com/api/events/delete/${id}`);
       fetchEvents();
     }
   };
@@ -170,7 +170,7 @@ const ViewEvents = () => {
             {events.map(event => (
               <tr key={event._id} className="fade-in">
                 <td className="text-center">
-                  <img src={`http://localhost:5000/uploads/${event.img}`} alt={event.title} width="100" className="img-thumbnail" />
+                  <img src={`https://arjun-academy-4c7g.onrender.com/uploads/${event.img}`} alt={event.title} width="100" className="img-thumbnail" />
                 </td>
                 <td>{event.title}</td>
                 <td>{event.date}</td>

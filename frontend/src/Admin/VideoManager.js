@@ -14,7 +14,7 @@ const VideoManager = () => {
 
   const fetchVideos = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/videos');
+      const res = await axios.get('https://arjun-academy-4c7g.onrender.com/api/videos');
       setVideos(res.data);
     } catch (err) {
       console.error('Error fetching videos:', err.message);
@@ -49,9 +49,9 @@ const VideoManager = () => {
       };
 
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/videos/${editingId}`, updatedForm);
+        await axios.put(`https://arjun-academy-4c7g.onrender.com/api/videos/${editingId}`, updatedForm);
       } else {
-        await axios.post('http://localhost:5000/api/videos', updatedForm);
+        await axios.post('https://arjun-academy-4c7g.onrender.com/api/videos', updatedForm);
       }
 
       setFormData({ title: '', url: '' });
@@ -70,7 +70,7 @@ const VideoManager = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this video?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/videos/${id}`);
+        await axios.delete(`https://arjun-academy-4c7g.onrender.com/api/videos/${id}`);
         fetchVideos();
       } catch (err) {
         console.error('Error deleting video:', err.message);

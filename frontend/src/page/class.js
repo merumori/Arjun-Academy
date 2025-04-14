@@ -9,7 +9,7 @@ const Classes = () => {
   useEffect(() => {
     const fetchClasses = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/classes');
+        const response = await axios.get('https://arjun-academy-4c7g.onrender.com/api/classes');
         setClasses(response.data);
       } catch (error) {
         console.error('Error fetching classes:', error);
@@ -31,7 +31,7 @@ const Classes = () => {
             <div key={classItem._id} className="col-xl-4 col-lg-4 col-md-6">
               <div className="class-item">
                 <div className="class-img">
-                  <img src={`http://localhost:5000${classItem.image}`} alt={classItem.title} />
+                  <img src={`https://arjun-academy-4c7g.onrender.com${classItem.image}`} alt={classItem.title} />
                 </div>
                 <div className="class-content">
                   <h4 className="title">
