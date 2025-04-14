@@ -17,7 +17,7 @@ import Classes from "./page/class";
 import ContactSection from "./page/Contect";
 // import BlogContentArea from "./page/StudentBlog";
 import AdmissionForm from "./page/AdmissionForm";
-import Admin from "./Admin/index";
+import Main from "./Admin/main";
 import EventPost from "./layout/eventpost";
 import VideoEvent from "./layout/VideoEvent";
 
@@ -118,7 +118,7 @@ function App() {
           <Route path="/admission" element={<AdmissionForm />} />
 
           {/* Admin Panel */}
-          <Route path="/admin/*" element={<Admin/>} />
+          <Route path="/admin/*" element={<Main />} />
         </Routes>
       </div>
     </Router>

@@ -8,23 +8,28 @@ import ViewAdmissions from "./ViewAdmissions";
 import ViewTeachers from "./ViewTeachers";
 import InsertClass from "./InsertClass";
 import Classes from "./viewclass";
+import ViewEvents from "./ViewEvents";
+import VideoManager from "./VideoManager";
+import AdminDashboard from "./AdminDashboard";
+import Settings from "./Settings";
 
 const Admin = () => {
   return (
     <div className="admin-wrapper">
       <AdminNavbar />
       <div className="admin-content">
-        {/* Sidebar */}
         <Sidebar />
-        {/* Main Content */}
         <div className="admin-main">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<AdminDashboard />} />
+            <Route index element={<Dashboard />} />
             <Route path="admission-data" element={<ViewAdmissions />} />
             <Route path="teachers" element={<ViewTeachers />} />
             <Route path="viewClasses" element={<Classes />} />
             <Route path="InsertClass" element={<InsertClass />} />
-            
+            <Route path="Viewevent" element={<ViewEvents />} />
+            <Route path="VideoPost" element={<VideoManager />} />
+            <Route path="settings" element={<Settings />} />
           </Routes>
         </div>
       </div>

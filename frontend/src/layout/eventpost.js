@@ -1,41 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 
-import firstimg from '../img/eventpost/Annual Sports Day.jpeg';
-import secondimg from '../img/eventpost/Science Fair.png';
-import thirdimg from '../img/eventpost/CulturalFest.png';
-
-const events = [
-  {
-    id: 1,
-    title: 'Annual Sports Day',
-    date: 'April 5, 2025',
-    time: '10:00 AM - 4:00 PM',
-    location: 'School Ground',
-    description: 'Join us for an exciting day of sports and games! Prizes and refreshments available.',
-    img: firstimg
-  },
-  {
-    id: 2,
-    title: 'Science Fair',
-    date: 'May 15, 2025',
-    time: '9:00 AM - 3:00 PM',
-    location: 'School Auditorium',
-    description: 'Explore amazing science projects created by students and participate in fun experiments.',
-    img: secondimg
-  },
-  {
-    id: 3,
-    title: 'Cultural Fest',
-    date: 'June 20, 2025',
-    time: '6:00 PM - 10:00 PM',
-    location: 'Open Grounds',
-    description: 'Experience the vibrant culture of our school with dance, music, and food stalls.',
-    img: thirdimg
-  }
-];
-
 const EventPost = () => {
+  const [events, setEvents] = useState([]);
   const [hovered, setHovered] = useState(false);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -56,6 +23,14 @@ const EventPost = () => {
 
   const handleMouseEnter = () => setHovered(true);
   const handleMouseLeave = () => setHovered(false);
+
+  // Fetch event data from backend API
+  useEffect(() => {
+    fetch('http://localhost:5000/api/events/all')
+      .then((res) => res.json())
+      .then((data) => setEvents(data))
+      .catch((error) => console.error('Error fetching events:', error));
+  }, []);
 
   return (
     <div style={styles.container}>
@@ -86,7 +61,7 @@ const EventPost = () => {
       >
         {events.map(event => (
           <motion.div 
-            key={event.id} 
+            key={event._id} 
             style={styles.col}
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
@@ -113,7 +88,7 @@ const EventPost = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.img 
-                    src={event.img} 
+                    src={`http://localhost:5000/uploads/${event.img}`}
                     alt={event.title}
                     style={styles.cardImgTop}
                     initial={{ scale: 0.9 }}
@@ -151,7 +126,6 @@ const styles = {
     color: 'black',
     marginBottom: '12px',
     padding: '10px',
-    // background: 'linear-gradient(45deg, #ff7e5f, #feb47b)',
     borderRadius: '12px',
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
   },
@@ -159,11 +133,9 @@ const styles = {
     textAlign: 'center',
     fontSize: '20px',
     color: '#000',
-    // backgroundColor: '#fff',
     padding: '8px',
     borderRadius: '8px',
     marginBottom: '20px',
-    // boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
   },
   row: {
     display: 'flex',

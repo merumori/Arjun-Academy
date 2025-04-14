@@ -54,7 +54,7 @@ const AddTeachers = () => {
     formData.append("profileLink", newTeacher.profileLink);
 
     try {
-      const response = await axios.post("https://arjun-academy-ijou.onrender.com/teachers", formData, {
+      const response = await axios.post("http://localhost:5000/teachers", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

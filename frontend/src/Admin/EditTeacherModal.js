@@ -72,7 +72,7 @@ const EditTeacherModal = ({
                 />
                 {teacher.image && (
                   <img
-                    src={teacher.imagePreview || `https://arjun-academy-ijou.onrender.com/${teacher.image}`}
+                    src={teacher.imagePreview || `http://localhost:5000/${teacher.image}`}
                     alt="Teacher"
                     className="img-thumbnail mt-2 preview-img"
                   />

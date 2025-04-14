@@ -7,7 +7,7 @@ const ViewAdmissions = () => {
   useEffect(() => {
     const fetchAdmissions = async () => {
       try {
-        const response = await fetch("https://arjun-academy-ijou.onrender.com/admissions");
+        const response = await fetch("http://localhost:5000/admissions");
         if (response.ok) {
           const data = await response.json();
           setAdmissions(data);
@@ -26,7 +26,7 @@ const ViewAdmissions = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this record?")) {
       try {
-        const response = await fetch(`https://arjun-academy-ijou.onrender.com/admissions/${id}`, {
+        const response = await fetch(`http://localhost:5000/admissions/${id}`, {
           method: "DELETE",
         });
         if (response.ok) {
@@ -43,7 +43,7 @@ const ViewAdmissions = () => {
 
   const styles = {
     container: {
-      background: "linear-gradient(to right, #e6f0ff, #f4f7fe)",
+      background: "linear-gradient(to right,rgb(255, 255, 255),rgb(255, 255, 255))",
       minHeight: "100vh",
       padding: "20px",
       fontFamily: "'Poppins', sans-serif",
@@ -71,7 +71,7 @@ const ViewAdmissions = () => {
       minWidth: "1000px", // Prevent table from squeezing on smaller screens
     },
     th: {
-      backgroundColor: "#457b9d",
+      backgroundColor: "rgb(35, 204, 136)",
       color: "#ffffff",
       padding: "14px",
       fontSize: "16px",

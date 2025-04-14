@@ -8,7 +8,12 @@ const teacherRoutes = require('./routes/teacherRoutes');
 const path = require('path');
 const teacherDetailsRoutes = require('./routes/teacherDetailsRoutes.js');
 const classRoutes = require('./routes/classRoutes');
+const eventRoutes = require('./routes/eventRoutes');
+const videoRoutes = require('./routes/videoRoutes'); // Import video routes
+const authRoutes = require('./routes/authRoutes');
 dotenv.config();
+require('dotenv').config();
+
 
 const app = express();
 
@@ -27,10 +32,13 @@ app.use(bodyParser.json());
 app.set("view engine", "ejs");
 
 // Routes
+app.use('/api/auth', authRoutes);
 app.use("/", admissionRoutes);
 app.use('/teachers', teacherRoutes);
 app.use("/singalteacher", teacherDetailsRoutes);
 app.use('/api', classRoutes);
+app.use('/api/events', eventRoutes);
+app.use('/api/videos', videoRoutes);
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
   serverSelectionTimeoutMS: 10000, // Timeout if connection takes too long

@@ -5,12 +5,16 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const menuItems = [
-    { title: "Dashboard", icon: "🏠", route: "/admin" },
-    { title: "Admission Data", icon: "📋", route: "/admin/admission-data" },
-    { title: "Teachers", icon: "👨‍🏫", route: "/admin/teachers" },
-    { title: "Class", icon: "👩‍🎓", route: "/admin/viewClasses" },
-    { title: "Blog", icon: "📝", route: "/admin/blog" },
+    { title: "Dashboard", icon: "🏠", route: "/admin/dashboard" },
+    { title: "Dashboard", icon: "🏠", route: "/admin/dashboard" },
+    { title: "Admission Data", icon: "📊", route: "/admin/dashboard/admission-data" },
+    { title: "Teachers", icon: "👩‍🏫", route: "/admin/dashboard/teachers" },
+    { title: "Classes", icon: "📚", route: "/admin/dashboard/viewClasses" },
+    { title: "Events", icon: "📅", route: "/admin/dashboard/Viewevent" },
+    { title: "Videos", icon: "🎥", route: "/admin/dashboard/VideoPost" },
+    { title: "Settings", icon: "⚙️", route: "/admin/dashboard/settings" }, // Added Settings item
   ];
+  
 
   return (
     <div className="sidebar">
@@ -29,7 +33,7 @@ const Sidebar = () => {
       <style>{`
         .sidebar {
           width: 240px;
-          background-color: #222;
+          background: linear-gradient(135deg, rgb(35, 204, 136), rgb(142, 207, 53));
           color: white;
           height: 100vh;
           padding: 20px;
@@ -52,7 +56,7 @@ const Sidebar = () => {
         }
 
         .sidebar-item:hover {
-          background-color: #1bcf5c;
+          background-color:rgb(226, 226, 226);
           color: #000;
         }
 
