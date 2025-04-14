@@ -48,7 +48,7 @@ const TeacherDetails = () => {
     });
 
     try {
-      const response = await axios.post('http://localhost:5000/singalteacher', form, {
+      const response = await axios.post('https://arjun-academy-ijou.onrender.com/singalteacher', form, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       alert(response.data.message);
